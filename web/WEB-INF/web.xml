@@ -8,8 +8,17 @@
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.cesi.controllers.TestServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Test1</servlet-name>
+        <servlet-class>com.cesi.controllers.Test1</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/toto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Test1</servlet-name>
+        <url-pattern>/test1</url-pattern>
     </servlet-mapping>
 </web-app>
