@@ -6,8 +6,14 @@ public class Produit {
     private float prixAchat;
     private boolean remy;
 
-    public Produit(){
+    public Produit() {
         super();
+    }
+
+    public Produit(String nom, String description, float prixAchat) {
+        this.nom = nom;
+        this.description = description;
+        this.prixAchat = prixAchat;
     }
 
     public String getNom() {
