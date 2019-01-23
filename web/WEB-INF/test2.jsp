@@ -10,18 +10,6 @@
 </head>
 <body>
 <div class="container">
-    <p>
-        <%
-            String attribut = (String) request.getAttribute("test");
-            out.println(attribut);
-
-            String parametre = request.getParameter("lang");
-            out.println("Langue via la jsp : " + parametre);
-
-            ArrayList<Produit> listeProduits = (ArrayList<Produit>) request.getAttribute("listeProduits");
-        %>
-    </p>
-
     <p>Via le scriptlet</p>
     <table class="table">
         <tr>
@@ -31,8 +19,10 @@
         </tr>
 
         <%
-            for (int i = 0; i < listeProduits.size(); i++) {
-                Produit produit = listeProduits.get(i);
+            ArrayList<Produit> maListeDeProduits = (ArrayList<Produit>) request.getAttribute("listeProduits");
+
+            for (int i = 0; i < maListeDeProduits.size(); i++) {
+                Produit produit = maListeDeProduits.get(i);
                 out.println("<tr>");
                 out.println("<td scope=\"row\">" + produit.getNom() + "</td>");
                 out.println("<td scope=\"row\">" + produit.getDescription() + "</td>");
@@ -53,13 +43,13 @@
         <c:forEach var="produit" items="${listeProduits}">
             <tr>
                 <td>
-                        <c:out value="${produit.getNom()}"/>
+                        <c:out value="${produit.nom}"/>
                 </td>
                 <td>
-                        <c:out value="${produit.getDescription()}"/>
+                        <c:out value="${produit.description}"/>
                 </td>
                 <td>
-                        <c:out value="${produit.getPrixAchat()}"/>
+                        <c:out value="${produit.prixAchat}"/>
                 </td>
             </tr>
         </c:forEach>
