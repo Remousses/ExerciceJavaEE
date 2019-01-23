@@ -33,4 +33,15 @@
             <letter>C</letter>
         </grade>
     </student>
+    <student id="4">
+        <name>
+            <first>Rémy</first>
+            <last>Argentin</last>
+            <middle>Georges</middle>
+        </name>
+        <grade>
+            <points>100</points>
+            <letter>A</letter>
+        </grade>
+    </student>
 </students>
