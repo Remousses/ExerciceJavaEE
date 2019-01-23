@@ -1,12 +1,14 @@
 package com.cesi.controllers;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
 
+@WebServlet(name = "MariaDBConnection", urlPatterns = "/mariaDB")
 public class MariaDBConnection extends HttpServlet {// JDBC driver name and database URL
     private static final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/javasql";
